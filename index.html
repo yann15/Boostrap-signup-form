@@ -17,7 +17,8 @@
 		.first-p:before{
 			content: "";
 			display: block;
-			width: 250px;
+			/* use percentage instead of specific size */
+			width: 46%;
 			height: 1px;
 			background: #00FA9A;
 			position: absolute;
@@ -27,7 +28,8 @@
 		.first-p:after{
 			content: "";
 			display: block;
-			width: 250px;
+			/* use percentage instead of specific size */
+			width: 46%;
 			height: 1px;
 			background: #00FA9A;
 			position: absolute;
@@ -38,18 +40,20 @@
 		
 	</head>
 	<body>
-		
 		<div class="container mt-5">
 			<div class="row">
 				<div class="col-md-6 offset-md-3">
-					<header> REGISTER </header>		
+					<header class="mb-4 text-center"> REGISTER </header>		
 					<form class="main-form">
 						<div class="row mb-3">
 							<div class="col">
-								<a class="btn btn-sm px-3 btn-light" role="button" style="width: 100%;"><img src="googleLogo.png" height="30" alt="facebook logo" > Sign up with Google </a>
+								<!-- 
+									border:.5px solid #d3d3d3; background-color: white; box-shadow: 0px 4px 5px -4px rgba(128,128,128,1);
+								 -->
+								<a class="btn btn-sm px-3 btn-light" role="button" style="width: 100%; border:.5px solid #d3d3d3; background-color: white; box-shadow: 0px 4px 5px -4px rgba(128,128,128,1);"><img src="googleLogo.png" height="30" alt="facebook logo" > Sign up with Google </a>
 							</div>
 							<div class="col">
-								<a class="btn btn-sm px-3 btn-light" role="button" style="width: 100%;"><img src="facebookLogo.png" height="30" alt="facebook logo"> Sign up with Facebook </a>
+								<a class="btn btn-sm px-3 btn-light" role="button" style="width: 100%; border:.5px solid #d3d3d3; background-color: white; box-shadow: 0px 4px 5px -4px rgba(128,128,128,1);"><img src="facebookLogo.png" height="30" alt="facebook logo"> Sign up with Facebook </a>
 							</div>
 						</div>
 						<p class="first-p">or</p>
@@ -81,7 +85,6 @@
 							</div>
 							<div class="col">
 								<div class="form-group">
-						
 									<input type="password" id="confirmed" class="form-control" placeholder="Confirm  Password" name="confirmed">
 								</div>
 							</div>
@@ -107,10 +110,18 @@
 								<div>
 							</div>
 						</div>
+						<!-- Style to reset the custom Radio -->
 						<style>
-							#customRadio:checked::before{
-								border-color: green;
-								background-color: green!important;
+							.custom-control-input:checked~.custom-control-label::before {
+								color: #00FA9A;
+								border-color: #00FA9A;
+								background-color: #00FA9A;
+							}
+							.custom-radio .custom-control-input:checked~.custom-control-label::after {
+								background-image: none;
+							}
+							.custom-control-input:focus~.custom-control-label::before {
+								box-shadow: 0 0 0 0.2rem rgba(0, 255, 136, 0.61);	
 							}
 						</style>
 						<div class="container mb-3">
